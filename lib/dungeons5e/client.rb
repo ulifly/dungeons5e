@@ -7,7 +7,7 @@ module Dungeons5e
       @base_url = base_url
     end
 
-    def get(path)
+    def get(path, **args)
       request(path) do |uri|
        Net::HTTP::Get.new(uri)
       end

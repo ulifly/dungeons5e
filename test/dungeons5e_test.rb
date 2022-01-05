@@ -7,10 +7,10 @@ class Dungeons5eTest < Minitest::Test
     refute_nil ::Dungeons5e::VERSION
   end
 
-#  def test_fetch_all_monsters
-#  assert_instance_of Array, Dungeons5e.monsters
-#  assert_instance_of Hash, Dungeons5e.monsters.first
-#  end
+  def test_fetch_all_monsters
+  assert_instance_of Array, Dungeons5e.monsters
+  assert_instance_of Hash, Dungeons5e.monsters.first
+  end
 
 #  def test_fetch_a_monsters
 #  assert_instance_of Array, Dungeons5e.monsters(1)

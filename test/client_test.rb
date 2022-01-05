@@ -19,7 +19,6 @@ module Dungeons5e
 #-----------------get monsters tests-----------------------------------
        def test_client_must_get_all_monsters
            assert_instance_of Hash, client.get('monsters')
-           assert_instance_of Array, client.get('monsters')[:results]
        end
 
        def test_client_must_get_a_monster
@@ -28,10 +27,9 @@ module Dungeons5e
 #-----------------get Clases tests------------------------------------
       def test_client_must_get_all_Classes
           assert_instance_of Hash, client.get('Classes')
-          assert_instance_of Array, client.get('Classes')[:results]
       end
 
-      def test_client_must_get_a_monster
+      def test_client_must_get_a_class
          assert_instance_of Hash, client.get("Classes/barbarian")
       end
 
