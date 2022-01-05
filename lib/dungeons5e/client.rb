@@ -37,7 +37,7 @@ module Dungeons5e
     end
 
     def parse_json(content)
-      JSON.parse(content)
+      JSON.parse(content, symbolize_names: true)
     rescue JSON::ParserError
       nil
     end
