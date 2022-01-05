@@ -19,19 +19,31 @@ module Dungeons5e
 #-----------------get monsters tests-----------------------------------
        def test_client_must_get_all_monsters
            assert_instance_of Hash, client.get('monsters')
+           assert_instance_of Array, client.get('monsters')[:results]
        end
 
        def test_client_must_get_a_monster
           assert_instance_of Hash, client.get("monsters/tarrasque")
        end
 #-----------------get Clases tests------------------------------------
-      def test_client_must_get_all_Classes
-          assert_instance_of Hash, client.get('Classes')
+      def test_client_must_get_all_classes
+          assert_instance_of Hash, client.get('classes')
+          assert_instance_of Array, client.get('Classes')[:results]
       end
 
-      def test_client_must_get_a_class
+      def test_client_must_get_a_Class
          assert_instance_of Hash, client.get("Classes/barbarian")
       end
+
+      #-----------------get Races tests------------------------------------
+            def test_client_must_get_all_races
+                assert_instance_of Hash, client.get('races')
+                assert_instance_of Array, client.get('races')[:results]
+            end
+
+            def test_client_must_get_a_race
+               assert_instance_of Hash, client.get("Classes/barbarian")
+            end
 
 
      end

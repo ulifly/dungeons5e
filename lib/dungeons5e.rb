@@ -10,11 +10,11 @@ module Dungeons5e
   class ServerError < Error; end
 
   def self.monsters
-    Monster.new.list
+    Monsters.new.list
   end
 
   def self.monster
-    Monster.new.find(id)
+    Monsters.new.find(id)
   end
 
 

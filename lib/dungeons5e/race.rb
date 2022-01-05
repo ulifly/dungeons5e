@@ -9,9 +9,9 @@ module Dungeons5e
     #  response[:results] + AsyncStream.new(range).sum do |page|
 
 
+
       def all
          response = client.get("monsters")
-         total_monsters = response.dig (:count)
          binding.irb
       end
 
