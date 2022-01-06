@@ -12,11 +12,11 @@ module Dungeons5e
       def all
          response = client.get("monsters")
          total_monsters = response.dig (:count)
-         binding.irb
       end
 
-      def list(page = nil)
+      def list(page = 34)
         client.get("monsters", query: {page: page})[:results]
+        binding.irb
       end
 
       def find(id)
